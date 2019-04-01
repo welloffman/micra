@@ -20,7 +20,6 @@ $app->config = [
 
 		"/js/router/AppRouter.js",
 
-		"/js/models/AbstractCrudModel.js",
 		"/js/models/UserModel.js",
 
 		"/js/collections/UsersCollection.js",
@@ -30,6 +29,7 @@ $app->config = [
 		"/js/views/modal/ModalConfirmView.js",
 		"/js/views/HeaderView.js",
 		"/js/views/FooterView.js",
+		"/js/views/MainView.js",
 	],
 ];
 

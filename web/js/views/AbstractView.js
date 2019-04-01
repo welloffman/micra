@@ -3,16 +3,18 @@ var AbstractView = Backbone.View.extend({
 	renderCalled: false,
 	templateContext: {},
 
-	fetchTemplate: function(templateName) {
+	fetchTemplate: async function(templateName) {
 		if(app.templates[templateName]) {
 			this.initTemplate(app.templates[templateName]);
 		} else {
-			$.get('/underscore/' + templateName, function(resp) {
+			try {
+				const resp = await app.request('/underscore/' + templateName, {}, 'GET');
 				this.initTemplate(resp);
 				app.templates[templateName] = resp;
-			}.bind(this));
+			} catch(resp) {
+				app.showError(resp.message);
+			}
 		}
-
 	},
 
 	makeTemplate: function(options) {

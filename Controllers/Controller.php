@@ -19,6 +19,8 @@ class Controller {
 			'user' => $user->getPublicData(),
 			'config' => $config,
 			'js_files' => $this->app->config['js_files'],
+			'root' => $this->app->rootPath(),
+			'debug' => $this->app->config['debug'],
 		]);
 	}
 

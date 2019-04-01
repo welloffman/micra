@@ -8,7 +8,6 @@ var FooterView = AbstractView.extend({
 	},
 
 	events: {
-		'click .js-feedback': 'showFeedbackForm'
 	},
 
 	initialize: function(options) {
@@ -20,16 +19,6 @@ var FooterView = AbstractView.extend({
 
 	beforeRender: function() {
 		
-	},
-
-	showFeedbackForm: function() {
-		var messageView = new ModalConfirmView({
-			title: 'Обратная связь',
-			type: 'custom',
-			customView: new ModalFeedbackView()
-		});
-		messageView.show();
-		return false;
 	},
 
 	getCurrentYear: function() {

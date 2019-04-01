@@ -79,7 +79,7 @@ const AppRouter = Backbone.Router.extend({
 	},
 
 	index: function() {
-		
+		this.renderPage(new MainView());
 	},
 
 	pageNotFound: function() {
