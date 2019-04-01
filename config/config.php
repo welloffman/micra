@@ -1,14 +1,100 @@
 <?
 
 $app->config = [
-	'auth' => [
-		'login' => 'login',
-		'password' => 'password',
+	'debug' => false,
+	'log_path' => '/logs/app.log',
+	'mysql' => [
+		'host' => '127.0.0.1',
+		'dbname' => '',
+		'user' => '',
+		'password' => '',
 	],
-	// 'mysql' => [
-	// 	'host' => '127.0.0.1',
-	// 	'dbname' => 'dbname',
-	// 	'user' => 'user',
-	// 	'password' => 'password',
-	// ],
+	'server_timezone' => 'Europe/Moscow',
+	'salt' => 'dslierg34dSheJH_sdfsejksdsdf',
+	'access' => [
+		
+	],
+	'js_files' => [
+		"/js/polyfill.js",
+		"/js/misc.js",
+
+		"/js/router/AppRouter.js",
+
+		"/js/models/AbstractCrudModel.js",
+		"/js/models/CompanyModel.js",
+		"/js/models/UserModel.js",
+		"/js/models/ProjectModel.js",
+		"/js/models/TenderModel.js",
+		"/js/models/ContactModel.js",
+		"/js/models/CapabilityModel.js",
+		"/js/models/FileModel.js",
+		"/js/models/HistoryModel.js",
+		"/js/models/LotModel.js",
+		"/js/models/BidModel.js",
+		"/js/models/RegionModel.js",
+
+		"/js/collections/ProjectsCollection.js",
+		"/js/collections/TendersCollection.js",
+		"/js/collections/ContactsCollection.js",
+		"/js/collections/CapabilityCollection.js",
+		"/js/collections/CompaniesCollection.js",
+		"/js/collections/FilesCollection.js",
+		"/js/collections/UsersCollection.js",
+		"/js/collections/HistoryCollection.js",
+		"/js/collections/LotsCollection.js",
+		"/js/collections/BidsCollection.js",
+		"/js/collections/RegionsCollection.js",
+
+		"/js/views/AbstractView.js",
+		"/js/views/modal/ModalAdminRebiddingView.js",
+		"/js/views/modal/ModalConfirmView.js",
+		"/js/views/modal/ModalPartnerTenderConfirmView.js",
+		"/js/views/modal/ModalFeedbackView.js",
+		"/js/views/modal/ModalPartnerQuestionView.js",
+		"/js/views/modal/ModalUserStatusPendingView.js",
+		"/js/views/modal/ModalAdminMailingView.js",
+		"/js/views/PageNotFoundView.js",
+		"/js/views/PaginatorView.js",
+		"/js/views/HeaderView.js",
+		"/js/views/FooterView.js",
+		"/js/views/RegistrationContactsView.js",
+		"/js/views/RegistrationGeografyView.js",
+		"/js/views/RegistrationDocumentsView.js",
+		"/js/views/RegistrationOtherCompaniesView.js",
+		"/js/views/RegistrationAddressView.js",
+		"/js/views/RegistrationCapabilityView.js",
+		"/js/views/RegistrationView.js",
+		"/js/views/RegistrationAcceptedView.js",
+		"/js/views/LoginView.js",
+		"/js/views/ForgotPasswordView.js",
+		"/js/views/ConfirmRegistrationView.js",
+		"/js/views/DocumentsView.js",
+		"/js/views/ChangePasswordView.js",
+
+		"/js/views/AdminHistoryView.js",
+		"/js/views/AdminLotView.js",
+		"/js/views/AdminBidsView.js",
+		"/js/views/AdminCompaniesView.js",
+		"/js/views/AdminCompanyView.js",
+		"/js/views/AdminTendersView.js",
+		"/js/views/AdminTenderView.js",
+		"/js/views/AdminUsersView.js",
+		"/js/views/AdminUserView.js",
+		"/js/views/AdminRegionsView.js",
+		"/js/views/AdminCompaniesByRegionView.js",
+		"/js/views/AdminProjectsView.js",
+		"/js/views/AdminProjectView.js",
+
+		"/js/views/PartnerProfileView.js",
+		"/js/views/PartnerTendersView.js",
+		"/js/views/PartnerTenderView.js",
+		"/js/views/PartnerLotView.js",
+		"/js/views/PartnerHistoryView.js",
+		"/js/views/PartnerFaqView.js",
+	],
 ];
+
+$extConfig = __DIR__ . '/config_ext.php';
+if(is_file($extConfig)) {
+	require_once($extConfig);
+}

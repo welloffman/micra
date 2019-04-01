@@ -1,0 +1,457 @@
+@font-face {
+  font-family: Pragmatica;
+  src: url(/fonts/pragmatica/PpragmaticaCTT.woff);
+}
+@font-face {
+  font-family: Pragmatica Bold;
+  src: url(/fonts/pragmatica/PragmaticaCTTbold.woff);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto light;
+  src: url(/fonts/roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Roboto thin;
+  src: url(/fonts/roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: Roboto bold;
+  src: url(/fonts/roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Seropro;
+  src: url(/fonts/seropro/SeroPro.otf);
+}
+@font-face {
+  font-family: Seropro bold;
+  src: url(/fonts/seropro/SeroPro-Bold.otf);
+}
+@font-face {
+  font-family: Seropro extrathin;
+  src: url(/fonts/seropro/SeroPro-Extrathin.otf);
+}
+@font-face {
+  font-family: Seropro light;
+  src: url(/fonts/seropro/SeroPro-Light.otf);
+}
+@font-face {
+  font-family: Seropro medium;
+  src: url(/fonts/seropro/SeroPro-Medium.otf);
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pragmatica', 'Arial' !important;
+  font-size: 17px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  min-width: 1150px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+table th {
+  font-family: "Pragmatica Bold";
+}
+a.gray-color,
+span.gray-color {
+  border-bottom: 1px solid #f2a900;
+  color: #484848;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.gray-color:hover,
+span.gray-color:hover {
+  border-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: #484848;
+}
+a.gray-color:visited,
+span.gray-color:visited {
+  border-bottom: 1px solid #f2a900;
+  text-decoration: none;
+  color: #484848;
+}
+.preloader-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.login h2,
+.registration h2,
+.admin h2 {
+  padding-bottom: 20px;
+}
+.admin,
+.partner,
+.forgot {
+  flex-grow: 4;
+}
+.admin .partner-tender .row + .row,
+.partner .partner-tender .row + .row,
+.forgot .partner-tender .row + .row {
+  margin-top: 1rem;
+}
+.admin .file-uploader {
+  border: 2px dashed #d5dad5;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #fafafa;
+  position: relative;
+}
+.admin .file-uploader.is-empty {
+  flex-direction: row;
+}
+.admin .file-uploader.is-empty:after {
+  content: 'Перетащите файл сюда';
+  color: gray;
+}
+.admin .file-uploader a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+.admin .file-uploader a .fa-file {
+  font-size: 45px;
+  cursor: pointer;
+}
+.admin .file-uploader a .file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.admin .file-uploader .uploader-controls {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+.admin .file-uploader .uploader-controls .fa-upload,
+.admin .file-uploader .uploader-controls .fa-times {
+  color: #f2aa00;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.suggestions-wrapper {
+  display: block!important;
+}
+.registration .registration-progress {
+  text-align: center;
+}
+.registration .registration-progress li {
+  position: relative;
+  display: inline-block;
+  margin: 0 50px;
+  border-radius: 20px;
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+}
+.registration .registration-progress li:not(:last-child):after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 49px;
+  height: 1px;
+  width: 86px;
+  background-color: lightgray;
+}
+.thumb-wrapper {
+  width: 202px;
+  height: 202px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+.thumb-wrapper img {
+  vertical-align: middle;
+}
+.thumb-wrapper.js-upload-document {
+  cursor: pointer;
+  font-size: 30px;
+}
+.tender-pointer {
+  cursor: pointer;
+}
+.table-blue {
+  background-color: #d8f3f7;
+}
+.table-red {
+  background-color: #ffe6e8;
+}
+.btn.btn-yellow {
+  background-color: #f2aa00;
+  color: white;
+}
+.btn.btn-yellow:hover {
+  background-color: #e09d00;
+}
+.btn.btn-icon .fa,
+.btn.btn-icon .fal,
+.btn.btn-icon .far {
+  font-size: 25px;
+  vertical-align: middle;
+}
+.btn.btn-icon span {
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.badge {
+  font-family: "Pragmatica";
+}
+.badge.closable {
+  font-size: 14px;
+  position: relative;
+  padding-right: 20px;
+}
+.badge.closable .close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Seropro";
+}
+.modal .close {
+  font-family: "Seropro";
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label:before,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label:before {
+  background-color: #f2aa00;
+}
+.custom-radio .custom-control-input:focus ~ .custom-control-label:before,
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label:before {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(242, 170, 0, 0.25);
+}
+.custom-radio .custom-control-input:active ~ .custom-control-label:before,
+.custom-checkbox .custom-control-input:active ~ .custom-control-label:before {
+  background-color: rgba(242, 170, 0, 0.25);
+}
+.form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+.custom-file-input:focus ~ .custom-file-label {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+.custom-file-input:focus ~ .custom-file-label:after {
+  border-color: #ced4da;
+}
+.custom-file-label:after {
+  content: 'Обзор' !important;
+}
+.header {
+  background-color: #231f20;
+  flex-basis: 110px;
+  padding-top: 3px;
+  margin-bottom: 20px;
+}
+.header .menu {
+  padding: 0;
+  margin: 0 20px;
+  position: relative;
+}
+.header .menu li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 20px;
+}
+.header .menu li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+.header .menu li a.active {
+  color: #f2aa00;
+}
+.header .menu li.right-item {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  font-size: 20px;
+  color: white;
+}
+.header .menu li.right-item .logout {
+  position: absolute;
+  top: -26px;
+  right: 0;
+  min-width: 100px;
+  text-align: right;
+}
+.header .menu li.right-item .logout a {
+  font-size: 15px;
+}
+.header .menu li.right-item .rating {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  font-size: 15px;
+  color: #f2aa00;
+  min-width: 150px;
+  text-align: right;
+}
+.header .menu li.right-item .fa-user {
+  font-size: 15px;
+  vertical-align: top;
+  padding-top: 7px;
+}
+.header .menu li.right-item .user-name {
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: none;
+}
+.header .menu li .fa-sign-in,
+.header .menu li .fa-sign-out {
+  color: #f2aa00;
+}
+.footer {
+  background-color: #231f20;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.footer p {
+  margin-bottom: 0;
+}
+.footer p span {
+  padding-right: 20px;
+}
+.footer p span:last-child {
+  padding-right: 0;
+}
+.footer p span a {
+  color: white;
+  text-decoration: underline;
+  border-bottom: none;
+}
+.footer p span a:visited {
+  color: white;
+}
+.admin-tender .dropdown-toggle-split:focus {
+  box-shadow: none !important;
+}
+.admin-tender .col-md-1 select {
+  padding-right: 5px;
+}
+.admin-tenders .table td {
+  vertical-align: middle;
+}
+.admin-tenders .table td.description,
+.admin-tenders .table td.tender-name,
+.admin-tenders .table td.project-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+.admin-tenders .dropdown-toggle-split {
+  padding: 0 10px !important;
+}
+.admin-tenders .dropdown-toggle-split:focus {
+  box-shadow: none !important;
+}
+.partner-tenders .table tbody tr {
+  cursor: pointer;
+}
+.partner-tenders .table tbody tr:hover {
+  background-color: #fffaef;
+}
+.partner-tenders .table tbody tr td.description,
+.partner-tenders .table tbody tr td.tender-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+.partner-tenders .popover {
+  width: 500px !important;
+  max-width: 100%;
+}
+.partner-faq {
+  font-size: 20px;
+}
+.partner-faq .question {
+  font-family: Pragmatica Bold;
+  cursor: pointer;
+}
+.partner-faq .answer {
+  margin-bottom: 30px;
+  display: none;
+  padding-left: 30px;
+}
+.partner-faq .answer ul {
+  list-style-type: circle;
+  padding-left: 50px;
+}
+.admin-companies .table td {
+  vertical-align: middle;
+}
+.bids-list .card-body {
+  padding-bottom: 0;
+}
+.bids-list .card-body table {
+  margin-bottom: 0;
+}
+.bids-list .card-body table td:first-child {
+  width: 600px;
+}
+.bids-list .card-body table td:first-child a {
+  max-width: 550px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+}
+.admin-projects .table td {
+  vertical-align: middle;
+}
+.admin-projects .table td.project-name {
+  width: 500px;
+}
+.admin-projects .table td.project-name a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
+  display: inline-block;
+  vertical-align: top;
+}
+.admin-projects .table td.project-number {
+  width: 125px;
+}
+.admin-project .tender-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
